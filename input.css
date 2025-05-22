@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Roboto:wght@400;500&family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&family=Poppins:wght@700;800&family=Inter:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-text font-roboto;
+  }
+
+  h1 {
+    @apply font-playfair text-[56px] md:text-[72px] font-bold leading-tight;
+  }
+
+  h2 {
+    @apply font-montserrat text-[40px] md:text-[48px] font-semibold leading-tight;
+  }
+
+  h3 {
+    @apply font-montserrat text-[28px] md:text-[32px] font-semibold leading-tight;
+  }
+
+  p {
+    @apply text-[16px] md:text-[20px] leading-relaxed;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-[1440px] mx-auto px-8;
+  }
+
+  .section {
+    @apply py-section md:py-section-lg;
+  }
+
+  .nav-link {
+    @apply font-montserrat text-base font-semibold hover:text-accent transition-colors duration-300;
+  }
+
+  .btn {
+    @apply font-montserrat text-[16px] md:text-[18px] font-medium px-8 py-4 rounded-custom 
+           transition-all duration-300 hover:transform hover:-translate-y-0.5 
+           shadow-custom hover:shadow-lg;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-secondary;
+  }
+
+  .btn-secondary {
+    @apply btn bg-accent text-primary hover:bg-opacity-90;
+  }
+
+  .page {
+    @apply absolute inset-0 w-full h-full transition-all duration-500 ease-in-out;
+  }
+
+  .page-hidden {
+    @apply opacity-0 pointer-events-none;
+  }
+
+  .dot {
+    @apply w-3 h-3 rounded-full cursor-pointer transition-colors duration-300;
+  }
+
+  .dot-active {
+    @apply bg-accent;
+  }
+
+  .dot-inactive {
+    @apply bg-secondary;
+  }
+
+  .card {
+    @apply bg-white rounded-custom shadow-custom p-8 transition-all duration-300 
+           hover:shadow-lg hover:transform hover:-translate-y-1;
+  }
+
+  .image-container {
+    @apply relative overflow-hidden rounded-custom shadow-custom;
+  }
+
+  .image-overlay {
+    @apply absolute inset-0 bg-gradient-to-b from-primary/20 to-secondary/20 
+           opacity-0 transition-opacity duration-300 group-hover:opacity-100;
+  }
+}
