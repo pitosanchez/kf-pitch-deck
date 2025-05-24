@@ -12,20 +12,21 @@
     <nav
       class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-custom"
     >
-      <div class="container-custom py-2">
+      <div class="container-custom py-2 px-4">
         <div class="flex justify-between items-center">
           <a href="#hero" class="flex items-center space-x-2">
             <img
               src="/assets/kflogo.png"
               alt="Kidney Forward Logo"
-              class="h-10 w-auto"
+              class="h-8 md:h-10 w-auto"
             />
-            <span class="font-playfair text-xl font-bold text-primary"
+            <span
+              class="font-playfair text-lg md:text-xl font-bold text-primary"
               >KIDNEY FORWARD</span
             >
           </a>
-          <div class="hidden md:flex items-center">
-            <span class="font-bold text-xl text-primary"
+          <div class="flex items-center">
+            <span class="font-bold text-lg md:text-xl text-primary"
               >Presentation Deck</span
             >
           </div>
@@ -37,33 +38,31 @@
     <main class="relative h-screen overflow-hidden">
       <!-- Hero Section -->
       <section id="hero" class="page page-visible">
-        <div class="page-content">
-          <div class="grid md:grid-cols-2 gap-8 items-center">
-            <div class="space-y-6">
-              <h1>KIDNEY FORWARD</h1>
-              <h2 class="text-secondary text-xl md:text-2xl">
+        <div class="page-content px-4 md:px-8">
+          <div class="grid md:grid-cols-2 gap-4 md:gap-8 items-center">
+            <div class="space-y-4 md:space-y-6">
+              <h1 class="text-3xl md:text-4xl lg:text-5xl">KIDNEY FORWARD</h1>
+              <h2 class="text-secondary text-lg md:text-xl lg:text-2xl">
                 A NATIONAL INITIATIVE PRIORITIZING KIDNEY HEALTH IN THE UNITED
                 STATES THROUGH LIVING DONATION AWARENESS
               </h2>
-              <p>
+              <p class="text-sm md:text-base">
                 At Kidney Forward, our goal is to inspire individuals nationwide
                 to consider donating a kidney, a powerful act that can save
                 lives. Every year, over 100,000 people in the United States
                 await kidney transplants, with many unable to receive one due to
-                the limited availability of kidneys. Through compelling
-                advocacy, innovative education, and strong community engagement,
-                Kidney Forward aims to foster widespread awareness and motivate
-                greater participation in live kidney donation. We strive to
-                build supportive communities and equip individuals with the
-                knowledge and resources they need, ultimately transforming lives
-                through the gift of kidney donation.
+                the limited availability of kidneys.
               </p>
-              <div class="flex space-x-4">
-                <a href="#about" class="btn-primary">Learn More</a>
-                <a href="#contact" class="btn-secondary">Get Involved</a>
+              <div
+                class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4"
+              >
+                <a href="#about" class="btn-primary text-center">Learn More</a>
+                <a href="#contact" class="btn-secondary text-center"
+                  >Get Involved</a
+                >
               </div>
             </div>
-            <div class="image-container group">
+            <div class="image-container group mt-4 md:mt-0">
               <img
                 src="/assets/kflogo.png"
                 alt="Kidney Care Innovation"
@@ -77,8 +76,8 @@
 
       <!-- Andrew's Story -->
       <section id="andrew" class="page page-hidden">
-        <div class="page-content">
-          <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="page-content px-4 md:px-8">
+          <div class="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
             <div class="image-container group order-2 md:order-1">
               <img
                 src="/assets/alkf.jpg"
@@ -87,32 +86,23 @@
               />
               <div class="image-overlay"></div>
               <div
-                class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/60 px-4 py-2 rounded text-white text-center text-lg font-semibold w-11/12 md:w-3/4"
+                class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/60 px-4 py-2 rounded text-white text-center text-base md:text-lg font-semibold w-11/12 md:w-3/4"
               >
                 Andrew Luu<br />
-                <span class="text-base font-normal">Founder and CEO</span>
+                <span class="text-sm md:text-base font-normal"
+                  >Founder and CEO</span
+                >
               </div>
             </div>
-            <div class="space-y-8 order-1 md:order-2">
-              <h2>Andrew's Journey</h2>
-              <p>
+            <div class="space-y-4 md:space-y-8 order-1 md:order-2">
+              <h2 class="text-2xl md:text-3xl lg:text-4xl">Andrew's Journey</h2>
+              <p class="text-sm md:text-base">
                 Andrew Luu's journey began with a life-saving kidney transplant
                 from his mother at age 13—an act that fueled his lifelong
-                commitment to service and purpose. Initially launching a career
-                in corporate finance, Andrew soon pivoted toward mission-driven
-                work, co-founding a mentorship program and later a social
-                enterprise incubator. His path has spanned managing artists,
-                producing films, interning on Capitol Hill, and contributing to
-                a successful e-bike startup. He later led community engagement
-                efforts at Experian's CSR team and managed international affairs
-                programs in the federal government. Deeply committed to local
-                service, Andrew also volunteered with his local fire department
-                and served on its Board of Trustees. He holds degrees in
-                Biological Sciences and Economics from UC Irvine and an MBA from
-                Columbia University.
+                commitment to service and purpose.
               </p>
-              <div class="card">
-                <p class="italic">
+              <div class="card p-4 md:p-6">
+                <p class="italic text-sm md:text-base">
                   "Kidney Forward gave me the tools and support I needed to
                   manage my condition and live a full life."
                 </p>
@@ -537,11 +527,13 @@
     </main>
 
     <!-- Navigation Controls -->
-    <div class="nav-controls">
+    <div
+      class="nav-controls fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 flex items-center space-x-4 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full shadow-lg"
+    >
       <button id="prevBtn" class="nav-arrow" aria-label="Previous page">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
+          class="h-5 w-5 md:h-6 md:w-6"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -554,7 +546,7 @@
           />
         </svg>
       </button>
-      <div class="flex space-x-4">
+      <div class="flex space-x-2 md:space-x-4">
         <div class="dot dot-active" data-page="0" aria-label="Page 1"></div>
         <div class="dot dot-inactive" data-page="1" aria-label="Page 2"></div>
         <div class="dot dot-inactive" data-page="2" aria-label="Page 3"></div>
@@ -567,7 +559,7 @@
       <button id="nextBtn" class="nav-arrow" aria-label="Next page">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
+          class="h-5 w-5 md:h-6 md:w-6"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
