@@ -88,7 +88,7 @@
 
         /* Hide desktop navigation */
         .nav-controls {
-          display: none;
+          display: none !important;
         }
 
         /* Show mobile navigation arrows */
@@ -134,6 +134,20 @@
       @media screen and (min-width: 769px) {
         .mobile-nav-arrow {
           display: none;
+        }
+
+        .nav-controls {
+          display: flex !important;
+          position: fixed;
+          bottom: 1rem;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 1000;
+          background: rgba(255, 255, 255, 0.9);
+          backdrop-filter: blur(8px);
+          border-radius: 9999px;
+          padding: 0.5rem 1rem;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .btn-primary,
