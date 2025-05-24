@@ -11,5 +11,6 @@ export default defineConfig({
     css: {
         postcss: './postcss.config.js'
     },
-    publicDir: 'public'
+    publicDir: 'public',
+    base: process.env.NODE_ENV === 'production' ? '/kf-pitch-deck/' : '/'
 }); 
