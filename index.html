@@ -12,6 +12,17 @@
     <title>KIDNEY FORWARD</title>
     <link rel="icon" type="image/svg+xml" href="/assets/kflogo.png" />
     <script type="module" src="/src/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const learnMoreBtn = document.querySelector(".btn-primary");
+        const nextBtn = document.getElementById("nextBtn");
+
+        learnMoreBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          nextBtn.click();
+        });
+      });
+    </script>
     <style>
       /* Base styles */
       html,
